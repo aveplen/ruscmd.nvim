@@ -36,7 +36,7 @@ Vimscript
 lua << EOF
 require('ruscmd').setup{}
 EOF
-```j
+```
 
 Lua
 
