@@ -1,4 +1,5 @@
-# ruscmd
+# ruscmd.nvim
+
 
 
 ## Description
@@ -9,15 +10,7 @@ Works only with Unicode.
 
 This plugin is a lua-fork of ![this plugin](https://github.com/powerman/vim-plugin-ruscmd)
 
----
 
-Этот плагин позволит использовать команды command mode (NORMAL) используя русскую раскладку клавиатуры. В дополнение к этому плагин позволяет не переключаться для ввода наиболее используемых команд. Этого набора обычно достаточно, чтобы управляться с Vim без необходимости переключать раскладку. 
-
-Работает только с Unicode.
-
-Этот плагин является lua-форком ![этого плагина](https://github.com/powerman/vim-plugin-ruscmd)
-
----
 
 ## Install
 
@@ -33,7 +26,7 @@ Install with ![packer](https://github.com/wbthomason/packer.nvim)
 use 'aveplen/ruscmd.nvim'
 ```
 
----
+
 
 ## Setup
 
@@ -43,7 +36,7 @@ Vimscript
 lua << EOF
 require('ruscmd').setup{}
 EOF
-```
+```j
 
 Lua
 
@@ -51,11 +44,19 @@ Lua
 require('ruscmd').setup{}
 ```
 
----
+
 
 ## Configuration
 
 ```lua
+require('ruscmd').setup{
+  -- provide ex-command abbreviation
+  -- example: ':й' -> ':q'
+  abbreviations = true | false, -- default true
 
+  -- provide NORMAL-mode translation
+  -- example: 'ц' -> 'w'
+  keymaps = true | false, -- default true
+}
 ```
 
